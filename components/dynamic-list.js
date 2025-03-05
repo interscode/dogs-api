@@ -5,11 +5,11 @@ export default function DynamicList({ theme, data }) {
   return (
     <FlatList
       data={data}
-      keyExtractor={(item) => item.namespacedId}
+      keyExtractor={(item) => item}
       renderItem={({ item }) => (
         <Item
           name={item.name}
-          image={item.image}
+          image={item}
           price={item.price}
           theme={theme}
         />

@@ -6,7 +6,6 @@ export function Header({ theme, toggleTheme }) {
   return (
     <View style={styles.header}>
       <View style={styles.headerTitle}>
-        <Image source={require("../assets/logo.png")} style={styles.logo} />
         <Text style={styles.title}>Dogs API</Text>
       </View>
       <Pressable onPress={toggleTheme} style={{ padding: 2 }}>
