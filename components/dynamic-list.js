@@ -8,9 +8,7 @@ export default function DynamicList({ theme, data }) {
       keyExtractor={(item) => item}
       renderItem={({ item }) => (
         <Item
-          name={item.name}
           image={item}
-          price={item.price}
           theme={theme}
         />
       )}
@@ -33,9 +31,7 @@ function Item({ image, theme }) {
         },
       ]}
     >
-
       <Image style={styles.image} source={{ uri: image }} />
-
     </View>
   );
 }

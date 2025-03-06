@@ -32,16 +32,13 @@ export function Search({ theme, setText, text, setDogs }) {
               {
                 borderColor: theme === "light" ? "#dadada" : "#414141",
                 color: theme === "light" ? "#000" : "#fff",
-                flex: 1,
-                borderRadius: 50
               },
             ]}
           />
-
           <TouchableOpacity
             onPress={setDogs}
-            style={{justifyContent: 'center', alignItems:'center', paddingLeft: 12}}>
-            <IconSearch size={20} color={'#000'}/>
+            style={styles.searchButton}>
+            <IconSearch size={20} color={'#fff'}/>
           </TouchableOpacity>
 
         </View>

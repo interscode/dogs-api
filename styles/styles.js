@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "#4bb508",
+    backgroundColor: "#3781cd",
     paddingTop: 40,
     paddingBottom: 10,
     paddingHorizontal: 20,
@@ -30,9 +30,9 @@ export const styles = StyleSheet.create({
   body: {
     paddingHorizontal: 20,
     paddingBottom: 350,
+    height: "100%",
   },
   item: {
-    padding: 10,
     marginVertical: 5,
     borderRadius: 5,
     borderWidth: 1,
@@ -41,27 +41,11 @@ export const styles = StyleSheet.create({
       height: 2,
     },
     width: "48%",
+    paddingVertical: 20,
   },
   image: {
-    width: 50,
-    height: 50,
-    marginTop: 15,
-    marginBottom: 10,
-  },
-  itemTitle: {
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-  itemDescription: {
-    fontSize: 14,
-  },
-  diamond: {
-    width: 20,
-    height: 20,
-  },
-  price: {
-    flexDirection: "row",
-    alignItems: "center",
+    width: 80,
+    height: 80,
   },
   search: {
     paddingHorizontal: 20,
@@ -74,18 +58,28 @@ export const styles = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderRadius: 5,
     padding: 10,
+    flex: 1,
+    borderTopLeftRadius: 10,
+    borderBottomLeftRadius: 10,
+  },
+  searchButton: {
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 10,
+    backgroundColor: "#3781cd",
+    borderTopRightRadius: 10,
+    borderBottomRightRadius: 10,
   },
   bottomContainer: {
-   
     width: "100%",
-    padding: 20,
+    paddingHorizontal: 20,
+    paddingBottom: 10,
   },
   buttonRandom: {
     height: 40,
-    backgroundColor: "#4bb508",
-    borderRadius: 5,
+    backgroundColor: "#3781cd",
+    borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -93,4 +87,8 @@ export const styles = StyleSheet.create({
     color: "#fff",
     fontWeight: "bold",
   },
+  error: {
+    color: "red",
+    textAlign: "center",
+  }
 });
