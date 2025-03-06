@@ -8,7 +8,8 @@ import { useDogs } from "../hooks/useDogs";
 
 export default function Main() {
   const [theme, setTheme] = useState("light");
-  const {getDogsRandom, dogs} = useDogs();
+  const [text, setText] = useState('')
+  const { dogs, loading, error, getDogsByBreed, getDogsRandom } = useDogs()
 
   const handleRandom = () => {
     getDogsRandom();
@@ -18,17 +19,19 @@ export default function Main() {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
+  const handleBreeds = () => {
+    getDogsByBreed(text)
+  };
 
   return (
     <View>
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <Search theme={theme} filterBlocks={() => {}} />
+      <Search theme={theme} setText={setText} text={text} setDogs={handleBreeds}/>
       <View style={[styles.bottomContainer, { backgroundColor: theme === "light" ? "#f8f8ff" : "#000" }]}>
         <Pressable onPress={handleRandom} style={styles.buttonRandom}>
           <Text style={styles.buttonText}>Random</Text>
         </Pressable>
       </View>
-      
       <View
         style={[
           styles.body,

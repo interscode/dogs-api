@@ -20,7 +20,7 @@ export default function DynamicList({ theme, data }) {
   );
 }
 
-function Item({ name, image, price, theme }) {
+function Item({ image, theme }) {
   return (
     <View
       style={[
@@ -29,23 +29,13 @@ function Item({ name, image, price, theme }) {
           backgroundColor: theme === "light" ? "#f8f8ff" : "#000",
           shadowColor: theme === "light" ? "#000" : "#fff",
           borderColor: theme === "light" ? "#e4e4e7" : "#333",
+          alignItems: 'center'
         },
       ]}
     >
-      <Text
-        style={[
-          styles.itemTitle,
-          {
-            color: theme === "light" ? "#000" : "#fff",
-          },
-        ]}
-      >
-        {name}
-      </Text>
+
       <Image style={styles.image} source={{ uri: image }} />
-      <View style={styles.price}>
-        { /* Description */ }
-      </View>
+
     </View>
   );
 }

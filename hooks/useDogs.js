@@ -10,8 +10,9 @@ export function useDogs() {
         setError(null);
 
         try {
-            const response = await fetch(`https://dog.ceo/api/breed/${breed}/images/5`);
+            const response = await fetch(`https://dog.ceo/api/breed/${breed.toLowerCase() }/images/random/5`);
             const data = await response.json();
+            console.log(data)
             setDogs(data.message);
         } catch (error) {
             setError(error);
