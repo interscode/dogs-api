@@ -76,5 +76,21 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     padding: 10,
-  }
+  },
+  bottomContainer: {
+   
+    width: "100%",
+    padding: 20,
+  },
+  buttonRandom: {
+    height: 40,
+    backgroundColor: "#4bb508",
+    borderRadius: 5,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "#fff",
+    fontWeight: "bold",
+  },
 });

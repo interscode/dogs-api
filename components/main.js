@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { Pressable, View, Text } from "react-native";
 import { styles } from "../styles/styles";
 import DynamicList from "./dynamic-list";
 import { useState } from "react";
@@ -10,6 +10,10 @@ export default function Main() {
   const [theme, setTheme] = useState("light");
   const [text, setText] = useState('')
   const { dogs, loading, error, getDogsByBreed, getDogsRandom } = useDogs()
+
+  const handleRandom = () => {
+    getDogsRandom();
+  };
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
