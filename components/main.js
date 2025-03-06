@@ -15,13 +15,6 @@ export default function Main() {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
-  const filterBlocks = (text) => {
-    const filteredBlocks = data.filter((block) =>
-      block.name.toLowerCase().includes(text.toLowerCase())
-    );
-    setBlocks(filteredBlocks);
-  };
-
   const handleBreeds = () => {
     getDogsByBreed(text)
   };
@@ -30,6 +23,11 @@ export default function Main() {
     <View>
       <Header theme={theme} toggleTheme={toggleTheme} />
       <Search theme={theme} setText={setText} text={text} setDogs={handleBreeds}/>
+      <View style={[styles.bottomContainer, { backgroundColor: theme === "light" ? "#f8f8ff" : "#000" }]}>
+        <Pressable onPress={handleRandom} style={styles.buttonRandom}>
+          <Text style={styles.buttonText}>Random</Text>
+        </Pressable>
+      </View>
       <View
         style={[
           styles.body,

@@ -8,7 +8,10 @@ export default function DynamicList({ theme, data }) {
       keyExtractor={(item) => item}
       renderItem={({ item }) => (
         <Item
+          name={item.name}
           image={item}
+          price={item.price}
+          theme={theme}
         />
       )}
       numColumns={2}
